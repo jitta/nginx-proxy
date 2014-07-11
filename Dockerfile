@@ -3,7 +3,7 @@ FROM google/debian:wheezy
 # Install Nginx.
 RUN apt-get update
 RUN apt-get install -y python-software-properties wget
-RUN add-apt-repository -y ppa:nginx/stable
+RUN add-apt-repository 'deb http://nginx.org/packages/debian/ wheezy nginx'
 
 RUN apt-get update
 RUN apt-get install -y nginx
