@@ -4,6 +4,7 @@ FROM google/debian:wheezy
 RUN apt-get update
 RUN apt-get install -y python-software-properties wget
 RUN add-apt-repository 'deb http://nginx.org/packages/debian/ wheezy nginx'
+RUN wget http://nginx.org/keys/nginx_signing.key && apt-key add nginx_signing.key
 
 RUN apt-get update
 RUN apt-get install -y nginx
